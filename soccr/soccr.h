@@ -58,7 +58,17 @@ void libsoccr_set_log(unsigned int level, void (*fn)(unsigned int level, const c
 /*
  * An opaque handler for C/R-ing a TCP socket.
  */
-struct libsoccr_sk;
+
+//struct libsoccr_sk;
+typedef struct libsoccr_sk {
+        int fd;
+        unsigned flags;
+        char *recv_queue;
+        char *send_queue;
+        union libsoccr_addr *src_addr;
+        union libsoccr_addr *dst_addr;
+} libsoccr_sk;
+
 
 union libsoccr_addr {
 	struct sockaddr sa;

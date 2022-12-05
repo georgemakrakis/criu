@@ -1,4 +1,4 @@
-#include <errno.h>
+#include <errno.h
 #include <libnet.h>
 #include <linux/sockios.h>
 #include <linux/types.h>
@@ -106,15 +106,6 @@ static int tcp_repair_off(int fd)
 
 	return ret;
 }
-
-//typedef struct libsoccr_sk {
-//	int fd;
-//	unsigned flags;
-//	char *recv_queue;
-//	char *send_queue;
-//	union libsoccr_addr *src_addr;
-//	union libsoccr_addr *dst_addr;
-//} libsoccr_sk;
 
 #define SK_FLAG_FREE_RQ 0x1
 #define SK_FLAG_FREE_SQ 0x2
